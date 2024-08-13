@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import BrewDisplay from './BrewDisplay'
+import Form from './Form'
 
 const Home = () => {
 
@@ -18,6 +19,7 @@ const display = breweries.map(
 )
   return (
     <div>
+      <Form />
       {display}
     </div>
   )
