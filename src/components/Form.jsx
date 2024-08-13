@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import Swal from "sweetalert2";
 
 const Form = ({ breweries, setBreweries }) => {
   const [formData, setFormData] = useState({
     name: "",
     brewery_type: "",
     address_1: "",
-    address_2: null,
-    address_3: null,
+    address_2: "",
+    address_3: "",
     city: "",
     state_province: "",
     postal_code: "",
@@ -27,7 +28,8 @@ const Form = ({ breweries, setBreweries }) => {
     });
   }
 
-  function handle_submit() {
+  function handle_submit(e) {
+    e.preventDefault();
     fetch("https://api.openbrewerydb.org/breweries", {
       method: "POST",
       headers: {
@@ -38,13 +40,13 @@ const Form = ({ breweries, setBreweries }) => {
     })
       .then((res) => res.json())
       .then((brew) => {
-        setBreweries(brew, ...breweries);
+        setBreweries([brew, ...breweries]);
         setFormData({
           name: "",
           brewery_type: "",
           address_1: "",
-          address_2: null,
-          address_3: null,
+          address_2: "",
+          address_3: "",
           city: "",
           state_province: "",
           postal_code: "",
@@ -56,8 +58,21 @@ const Form = ({ breweries, setBreweries }) => {
           state: "",
           street: "",
         });
+        Swal.fire({
+          title: 'Success!',
+          text: 'Brewery added successfully.',
+          icon: 'success',
+          confirmButtonText: 'Okay'
+        });
       })
-      .catch((err) => console.error(err));
+      .catch((err) => {console.error(err)
+        Swal.fire({
+          title: 'Error!',
+          text: 'There was an error adding the brewery.',
+          icon: 'error',
+          confirmButtonText: 'Okay'
+        });
+      });
   }
   return (
     <div>
@@ -70,46 +85,51 @@ const Form = ({ breweries, setBreweries }) => {
             name="name"
             value={formData.name}
             required
-            onchange={handlesAdds}
+            onChange={handlesAdds}
           />
         </div>
         <div>
           <label htmlFor="brewery_type">Brewery Type: </label>
           {/* should have options */}
-          <input
-            type="text"
-            name="name"
-            value={formData.brewery_type}
-            required
-            onchange={handlesAdds}
-          />
+          <select name="brewery_type" value={formData.brewery_type} required onChange={handlesAdds}>
+            <option value="micro">micro</option>
+            <option value="nano">nano</option>
+            <option value="regional">regional</option>
+            <option value="brewpub">brewpub</option>
+            <option value="large">large</option>
+            <option value="planning">planning</option>
+            <option value="bar">bar</option>
+            <option value="contract">contract</option>
+            <option value="proprietor">proprietor</option>
+            <option value="closed">closed</option>
+          </select>
         </div>
         <div>
-          <label htmlFor="address_1">address_1: </label>
+          <label htmlFor="address_1">Address 1: </label>
           <input
             type="text"
             name="address_1"
             value={formData.address_1}
             required
-            onchange={handlesAdds}
+            onChange={handlesAdds}
           />
         </div>
         <div>
-          <label htmlFor="address_2">address_2: </label>
+          <label htmlFor="address_2">Address 2: </label>
           <input
             type="text"
             name="address_2"
             value={formData.address_2}
-            onchange={handlesAdds}
+            onChange={handlesAdds}
           />
         </div>
         <div>
-          <label htmlFor="address_3">address_3: </label>
+          <label htmlFor="address_3">Address 3: </label>
           <input
             type="text"
             name="address_3"
             value={formData.address_3}
-            onchange={handlesAdds}
+            onChange={handlesAdds}
           />
         </div>
         <div>
@@ -119,17 +139,17 @@ const Form = ({ breweries, setBreweries }) => {
             name="city"
             value={formData.city}
             required
-            onchange={handlesAdds}
+            onChange={handlesAdds}
           />
         </div>
         <div>
-          <label htmlFor="state_province">State Province: </label>
+          <label htmlFor="state_province">State/Province: </label>
           <input
             type="text"
             name="state_province"
             value={formData.state_province}
             required
-            onchange={handlesAdds}
+            onChange={handlesAdds}
           />
         </div>
         <div>
@@ -139,7 +159,7 @@ const Form = ({ breweries, setBreweries }) => {
             name="postal_code"
             value={formData.postal_code}
             required
-            onchange={handlesAdds}
+            onChange={handlesAdds}
           />
         </div>
         <div>
@@ -149,29 +169,25 @@ const Form = ({ breweries, setBreweries }) => {
             name="country"
             value={formData.country}
             required
-            onchange={handlesAdds}
+            onChange={handlesAdds}
           />
         </div>
         <div>
           <label htmlFor="longitude">Longitude: </label>
-          {/* Adding locations */}
           <input
             type="number"
             name="longitude"
             value={formData.longitude}
-            required
-            onchange={handlesAdds}
+            onChange={handlesAdds}
           />
         </div>
         <div>
           <label htmlFor="latitude">Latitude: </label>
-          {/* Adding locations */}
           <input
             type="number"
             name="latitude"
             value={formData.latitude}
-            required
-            onchange={handlesAdds}
+            onChange={handlesAdds}
           />
         </div>
         <div>
@@ -179,20 +195,20 @@ const Form = ({ breweries, setBreweries }) => {
           <input
             type="tel"
             name="phone"
-            pattern="[0-9]{3}- [0-9]{2}- [0-9]{3}"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
             value={formData.phone}
             required
-            onchange={handlesAdds}
+            onChange={handlesAdds}
           />
         </div>
         <div>
-          <label htmlFor="website_url">Add Homepage: </label>
+          <label htmlFor="website_url">Homepage: </label>
           <input
             type="url"
             name="website_url"
             value={formData.website_url}
             required
-            onchange={handlesAdds}
+            onChange={handlesAdds}
           />
         </div>
         <div>
@@ -202,7 +218,7 @@ const Form = ({ breweries, setBreweries }) => {
             name="state"
             value={formData.state}
             required
-            onchange={handlesAdds}
+            onChange={handlesAdds}
           />
         </div>
         <div>
@@ -212,7 +228,7 @@ const Form = ({ breweries, setBreweries }) => {
             name="street"
             value={formData.street}
             required
-            onchange={handlesAdds}
+            onChange={handlesAdds}
           />
         </div>
         <input type="submit" value="Add Brand" />
