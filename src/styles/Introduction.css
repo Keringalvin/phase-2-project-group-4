@@ -1,0 +1,17 @@
+.cover{
+    background-image: url(../assets/introphoto.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+    /* width: 80vw; */
+    background-position: center ;
+    background-attachment: fixed;
+}
+
+p{
+    border: 2px solid black;
+    color: white;
+    padding-right: 500px;
+    font-size: 40px;
+    text-align: center;
+}
