@@ -9,7 +9,7 @@ const Home = () => {
 const [breweries, setBreweries]=useState([])
 
 useEffect(()=>{
-  fetch('https://api.openbrewerydb.org/breweries')
+  fetch('https://group-project-api.vercel.app/breweries')
   .then(res =>res.json())
   .then(breweries => setBreweries(breweries))
 },[])

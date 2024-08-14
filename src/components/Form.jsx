@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 
-const Form = ({ breweries, setBreweries }) => {
+const Form = ({ breweries, setBreweries, }) => {
   const [formData, setFormData] = useState({
     name: "",
     brewery_type: "",
@@ -30,10 +30,10 @@ const Form = ({ breweries, setBreweries }) => {
 
   function handle_submit(e) {
     e.preventDefault();
-    fetch("https://api.openbrewerydb.org/breweries", {
+    fetch("https://group-project-api.vercel.app/breweries", {
       method: "POST",
       headers: {
-        "Content-type": "application/json",
+        "Content-Type": "application/json",
         Accept: "application/json",
       },
       body: JSON.stringify(formData),
@@ -59,17 +59,18 @@ const Form = ({ breweries, setBreweries }) => {
           street: "",
         });
         Swal.fire({
-          title: 'Success!',
-          text: 'Brewery added successfully.',
-          icon: 'success',
-          confirmButtonText: 'Okay'
-        });
-      })
-      .catch((err) => {console.error(err)
-        Swal.fire({
           title: 'Error!',
           text: 'There was an error adding the brewery.',
           icon: 'error',
+          confirmButtonText: 'Okay'
+        });
+        
+      })
+      .catch((err) => {console.error(err)
+        Swal.fire({
+          title: 'Success!',
+          text: 'Brewery added successfully.',
+          icon: 'success',
           confirmButtonText: 'Okay'
         });
       });
