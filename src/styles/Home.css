@@ -9,6 +9,21 @@
   .brew-display {
     margin-bottom: 20px;
   }
+
+   /* Search input styling */
+   .search {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .search input {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
   
   /* Media query for responsive design */
   @media (max-width: 768px) {

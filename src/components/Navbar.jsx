@@ -7,7 +7,6 @@ function Navbar() {
     <div className="nav">
       <header className="App">Breweries Advertisement</header>
       <div className="search">
-        <input type="text" placeholder="search...." className="search" />
         <nav className="navbar">
           <div className="navbar-brand">
             <Link to="/">My App</Link>

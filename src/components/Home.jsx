@@ -7,6 +7,7 @@ const Home = () => {
 // const url = `https://api.openbrewerydb.org/breweries`
 
 const [breweries, setBreweries]=useState([])
+const [search, setSearch] = useState("")
 
 useEffect(()=>{
   fetch('https://group-project-api.vercel.app/breweries')
@@ -14,14 +15,32 @@ useEffect(()=>{
   .then(breweries => setBreweries(breweries))
 },[])
 
-const display = breweries.map(
+
+const handlesSearch = e => {
+  setSearch(e.target.value)
+}
+
+const filteringBrands = breweries.filter(brewery => 
+  brewery.name.toLowerCase().includes(search.toLowerCase())
+)
+
+const display = filteringBrands.map(
   brew => 
     <div className='brew-display' key={brew.id}>
   <BrewDisplay brew={brew}  setBreweries={setBreweries}/>
   </div>
 )
+
   return (
     <div className='home-container'>
+      <div className='search'>
+      <input 
+      type='text'
+      placeholder='Search Brand'
+      value={search}
+      onChange={handlesSearch}
+      />
+      </div>
       {display}
     </div>
   )
