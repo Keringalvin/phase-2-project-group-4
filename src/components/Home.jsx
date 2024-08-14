@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import BrewDisplay from './BrewDisplay'
 import Form from './Form'
+import Navbar from './Navbar'
 
 const Home = () => {
 
@@ -19,7 +20,8 @@ const display = breweries.map(
 )
   return (
     <div>
-      <Form />
+      {/* <Navbar/> */}
+      {/* <Form /> */}
       {display}
     </div>
   )
