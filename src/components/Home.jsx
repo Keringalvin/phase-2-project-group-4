@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import BrewDisplay from './BrewDisplay'
-import Form from './Form'
-import Navbar from './Navbar'
+import '../styles/Home.css'
 
 const Home = () => {
 
@@ -16,12 +15,13 @@ useEffect(()=>{
 },[])
 
 const display = breweries.map(
-  brew => <BrewDisplay brew={brew} key={brew.id} setBreweries={setBreweries}/>
+  brew => 
+    <div className='brew-display' key={brew.id}>
+  <BrewDisplay brew={brew}  setBreweries={setBreweries}/>
+  </div>
 )
   return (
-    <div>
-      {/* <Navbar/> */}
-      {/* <Form /> */}
+    <div className='home-container'>
       {display}
     </div>
   )

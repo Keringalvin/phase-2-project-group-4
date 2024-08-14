@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import '../styles/Navbar.css'
 
 function Navbar() {
   return (
-    <div>
-      <header className="App">Breweries Advertisment</header>
+    <div className="nav">
+      <header className="App">Breweries Advertisement</header>
       <div className="search">
         <input type="text" placeholder="search...." className="search" />
         <nav className="navbar">
@@ -22,7 +23,7 @@ function Navbar() {
               <Link to="/contact">Contact</Link>
             </li>
           </ul>
-          <div className="navbar-actions"> vb
+          <div className="navbar-actions">
             <button className="btn btn-primary">Sign In</button>
           </div>
         </nav>

@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
+import '../styles/Form.css'
 
-const Form = ({ breweries, setBreweries, }) => {
+const Form = ({ breweries, setBreweries }) => {
   const [formData, setFormData] = useState({
     name: "",
     brewery_type: "",
     address_1: "",
-    address_2: null,
-    address_3: null,
+    address_2: "",
+    address_3: "",
     city: "",
     state_province: "",
     postal_code: "",
@@ -59,27 +60,28 @@ const Form = ({ breweries, setBreweries, }) => {
           street: "",
         });
         Swal.fire({
-          title: 'Error!',
-          text: 'There was an error adding the brewery.',
-          icon: 'error',
-          confirmButtonText: 'Okay'
-        });
-        
-      })
-      .catch((err) => {console.error(err)
-        Swal.fire({
           title: 'Success!',
           text: 'Brewery added successfully.',
           icon: 'success',
           confirmButtonText: 'Okay'
         });
+      })
+      .catch((err) => {
+        console.error(err);
+        Swal.fire({
+          title: 'Error!',
+          text: 'There was an error adding the brewery.',
+          icon: 'error',
+          confirmButtonText: 'Okay'
+        });
       });
   }
+
   return (
-    <div>
+    <div className="form-container">
       <h1>Add Your Brand</h1>
       <form onSubmit={handle_submit}>
-        <div>
+        <div className="form-group">
           <label htmlFor="name">Name: </label>
           <input
             type="text"
@@ -89,10 +91,10 @@ const Form = ({ breweries, setBreweries, }) => {
             onChange={handlesAdds}
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="brewery_type">Brewery Type: </label>
-          {/* should have options */}
           <select name="brewery_type" value={formData.brewery_type} required onChange={handlesAdds}>
+            <option value="">Select Brewery Type</option>
             <option value="micro">micro</option>
             <option value="nano">nano</option>
             <option value="regional">regional</option>
@@ -105,7 +107,7 @@ const Form = ({ breweries, setBreweries, }) => {
             <option value="closed">closed</option>
           </select>
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="address_1">Address 1: </label>
           <input
             type="text"
@@ -115,7 +117,7 @@ const Form = ({ breweries, setBreweries, }) => {
             onChange={handlesAdds}
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="address_2">Address 2: </label>
           <input
             type="text"
@@ -124,7 +126,7 @@ const Form = ({ breweries, setBreweries, }) => {
             onChange={handlesAdds}
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="address_3">Address 3: </label>
           <input
             type="text"
@@ -133,7 +135,7 @@ const Form = ({ breweries, setBreweries, }) => {
             onChange={handlesAdds}
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="city">City: </label>
           <input
             type="text"
@@ -143,7 +145,7 @@ const Form = ({ breweries, setBreweries, }) => {
             onChange={handlesAdds}
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="state_province">State/Province: </label>
           <input
             type="text"
@@ -153,7 +155,7 @@ const Form = ({ breweries, setBreweries, }) => {
             onChange={handlesAdds}
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="postal_code">Postal Code: </label>
           <input
             type="number"
@@ -163,7 +165,7 @@ const Form = ({ breweries, setBreweries, }) => {
             onChange={handlesAdds}
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="country">Country: </label>
           <input
             type="text"
@@ -173,7 +175,7 @@ const Form = ({ breweries, setBreweries, }) => {
             onChange={handlesAdds}
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="longitude">Longitude: </label>
           <input
             type="number"
@@ -182,7 +184,7 @@ const Form = ({ breweries, setBreweries, }) => {
             onChange={handlesAdds}
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="latitude">Latitude: </label>
           <input
             type="number"
@@ -191,7 +193,7 @@ const Form = ({ breweries, setBreweries, }) => {
             onChange={handlesAdds}
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="phone">Phone: </label>
           <input
             type="tel"
@@ -202,7 +204,7 @@ const Form = ({ breweries, setBreweries, }) => {
             onChange={handlesAdds}
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="website_url">Homepage: </label>
           <input
             type="url"
@@ -212,7 +214,7 @@ const Form = ({ breweries, setBreweries, }) => {
             onChange={handlesAdds}
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="state">States: </label>
           <input
             type="text"
@@ -222,7 +224,7 @@ const Form = ({ breweries, setBreweries, }) => {
             onChange={handlesAdds}
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="street">Street: </label>
           <input
             type="text"
