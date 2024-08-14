@@ -22,9 +22,6 @@ function Navbar() {
               <Link to="/contact">Contact</Link>
             </li>
           </ul>
-          <div className="navbar-actions">
-            <button className="btn btn-primary">Sign In</button>
-          </div>
         </nav>
       </div>
     </div>
