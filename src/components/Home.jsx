@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import BrewDisplay from './BrewDisplay'
+import Form from './Form'
+import Navbar from './Navbar'
 
 const Home = () => {
 
@@ -8,7 +10,7 @@ const Home = () => {
 const [breweries, setBreweries]=useState([])
 
 useEffect(()=>{
-  fetch('https://api.openbrewerydb.org/breweries')
+  fetch('https://group-project-api.vercel.app/breweries')
   .then(res =>res.json())
   .then(breweries => setBreweries(breweries))
 },[])
@@ -18,6 +20,8 @@ const display = breweries.map(
 )
   return (
     <div>
+      {/* <Navbar/> */}
+      {/* <Form /> */}
       {display}
     </div>
   )
