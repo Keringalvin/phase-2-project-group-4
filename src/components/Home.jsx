@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import BrewDisplay from './BrewDisplay'
 import '../styles/Home.css'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
 
@@ -55,6 +56,14 @@ const display = filteringBrands.map(
       <div className='fetcher'>
 
       {display}
+      </div>
+      <div className='to-form'>
+      <Link to='/form'> Are you interested in adding your brand</Link>
+      </div>
+      <div className='ending'>
+        <p style={{color:`white`}}>
+          Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo veniam, rem, maxime temporibus autem ex dolorem dolorum provident totam sapiente est mollitia nisi! Hic aperiam aut odit ipsa in perferendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab iusto a inventore deserunt aperiam temporibus laudantium esse possimus, voluptates odio fuga, obcaecati, veniam voluptatem nesciunt quae molestias repellendus odit totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit dicta cumque suscipit assumenda perspiciatis nam provident impedit deserunt necessitatibus blanditiis? Totam facilis perferendis at veritatis quis nesciunt numquam veniam. Recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nesciunt non ab fuga, quod deleniti perferendis dolore natus distinctio, commodi magni hic maxime porro recusandae libero debitis, doloremque animi molestias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, esse facilis. Iste amet recusandae, non earum veritatis quod iure, minus voluptatibus neque molestiae incidunt sit corrupti, dignissimos quidem voluptatum alias.
+        </p>
       </div>
       </div>
     </div>
