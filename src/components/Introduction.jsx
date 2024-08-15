@@ -1,5 +1,4 @@
 import React from 'react'
-import introPhoto from '../assets/introphoto.jpeg';
 import '../styles/Introduction.css'
 
 const Introduction = () => {

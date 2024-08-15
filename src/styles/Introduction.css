@@ -8,7 +8,7 @@
     background-attachment: fixed;
 }
 
-p{
+.cover p{
     border: 2px solid black;
     color: white;
     padding-right: 500px;

@@ -1,9 +1,11 @@
 /* Main container for the Form component */
+
+
 .form-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #8d6b0ee3;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
@@ -14,6 +16,8 @@
     color: #333;
     margin-bottom: 20px;
   }
+
+
   
   /* Form element styling */
   form {
@@ -37,7 +41,7 @@
   /* Input and select styling */
   .form-group input,
   .form-group select {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
