@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/Introduction.css'
+import { Link } from 'react-router-dom'
 
 const Introduction = () => {
   return (
@@ -10,6 +11,7 @@ const Introduction = () => {
     <div className='intro'>
       <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia perferendis sunt, rerum in veritatis praesentium. Cumque quod a repudiandae! Est, consequuntur asperiores atque quidem quaerat totam nihil architecto tempore voluptate.</h3>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ea vero doloremque quia asperiores. Quam fuga explicabo et amet, animi iure earum sed asperiores, minus at sapiente mollitia ipsum ea! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quas at omnis amet laboriosam? Incidunt, corrupti! Repellendus eveniet dolor ducimus odio, veniam, minima ullam libero, eos harum blanditiis amet nesciunt?</p>
+    <Link to='/home'>Want to see more</Link>
     </div>
     </>
   )

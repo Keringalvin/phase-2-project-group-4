@@ -28,3 +28,32 @@ height: 200vh;
     position: relative;
     top: -980px;
 }
+
+.intro h3 {
+    font-size: 1.5rem; /* Size of the heading */
+    color: #333; /* Dark gray color for readability */
+    margin-bottom: 15px; /* Space below the heading */
+  }
+
+  .intro p {
+    font-size: 1rem; /* Size of the paragraph text */
+    color: #666; /* Lighter gray for secondary text */
+    line-height: 1.6; /* Increase line height for better readability */
+    margin-bottom: 20px; /* Space below the paragraph */
+  }
+
+  .intro a {
+    display: inline-block; /* Allows padding to be applied */
+    padding: 10px 20px; /* Space around the link text */
+    font-size: 1rem; /* Font size of the link */
+    color: #007bff; /* Primary color for the link */
+    text-decoration: none; /* Remove underline from the link */
+    border: 2px solid #007bff; /* Border to match the link color */
+    border-radius: 5px; /* Rounded corners for the link */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+  }
+
+  .intro a:hover {
+    background-color: #007bff; /* Background color on hover */
+    color: #fff; /* Text color on hover */
+  }
