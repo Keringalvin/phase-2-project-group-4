@@ -11,8 +11,8 @@
 
 .words {
   position: relative; /* Allows the 'top' property to take effect */
-  top: -1190px; /* Adjust this value to move the element up */
-  bottom: 0;
+  top: -1160px; /* Adjust this value to move the element up */
+  /* bottom: 0; */
   border: 2px solid pink;
   margin-left: 45%;
   display: flex;
@@ -24,6 +24,8 @@
   color: white;
   padding-right: 70px;
   font-size: 10ch;
+  position: relative; /* Allows the 'top' property to take effect */
+  top: -85px; /* Adjust this value to move the element up */
   text-align: center;
 }
 
