@@ -1,17 +1,30 @@
 .cover{
-    background-image: url(../assets/introphoto.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 70vh;
-    /* width: 80vw; */
-    background-position: center ;
-    background-attachment: fixed;
+background-color: black;
+height: 200vh;
 }
 
-.cover p{
+.cover {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    height: 100vh; /* Full viewport height or adjust as needed */
+    width: 100%; /* Full width or adjust as needed */
+    overflow: hidden; /* Prevent overflow */
+  }
+  
+  .cover img {
+    height: 990px; /* Image height */
+    width: 700px; /* Image width */
+  }
+  
+.intro {
     border: 2px solid black;
-    color: white;
-    padding-right: 500px;
-    font-size: 40px;
+    /* color: white; */
+    /* padding-right: 50px; */
+    margin-left: 700px;
+    margin-right: 700px;
+    font-size: 20px;
     text-align: center;
+    position: relative;
+    top: -980px;
 }

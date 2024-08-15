@@ -1,89 +1,58 @@
-/* Container for the entire navbar */
+/* General Navbar Styles */
 .nav {
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid #ddd;
-    padding: 10px;
-    background-color: #f8f9fa;
-  }
-  
-  /* Header styling */
-  .App {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  
-  /* Search input styling */
-  .search {
-    margin: 10px 0;
-    display: flex;
-    justify-content: center;
-    
-  }
-  
-  .search input {
-    padding: 8px;
-    width: 200px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  /* Navbar container styling */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* Navbar brand styling */
-  .navbar-brand a {
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    color: #007bff;
-  }
-  
-  /* Navbar items styling */
-  .navbar-nav {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar-nav .nav-item {
-    margin-right: 20px;
-  }
-  
-  .navbar-nav .nav-item a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-  }
-  
-  .navbar-nav .nav-item a:hover {
-    color: #007bff;
-  }
-  
-  /* Navbar actions section styling */
-  .navbar-actions {
-    display: flex;
-    align-items: center;
-  }
-  
-  .btn {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .btn:hover {
-    background-color: #0056b3;
-  }
-  
+  background-color: #333; /* Dark background for a modern look */
+  color: #fff; /* White text for contrast */
+  padding: 10px 20px; /* Spacing around the content */
+}
+
+.header {
+  font-size: 24px; /* Larger text for the header */
+  font-weight: bold; /* Bold text for emphasis */
+  text-align: center; /* Center align header text */
+  margin-bottom: 10px; /* Space below the header */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Space between brand and nav items */
+  align-items: center; /* Center items vertically */
+}
+
+.navbar-brand {
+  font-size: 20px; /* Brand name size */
+}
+
+.navbar-brand a {
+  color: #fff; /* White text color for brand */
+  text-decoration: none; /* Remove underline from links */
+  font-weight: bold; /* Bold font for emphasis */
+}
+
+.navbar-nav {
+  list-style: none; /* Remove default list styling */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Flexbox layout for nav items */
+}
+
+.nav-item {
+  margin: 0 15px; /* Space between nav items */
+}
+
+.nav-item a {
+  color: #fff; /* White text color for links */
+  text-decoration: none; /* Remove underline from links */
+  padding: 5px 10px; /* Padding around links */
+  transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+.nav-item a:hover {
+  color: #ffd700; /* Highlight color on hover */
+  background-color: #444; /* Slightly lighter background on hover */
+  border-radius: 5px; /* Rounded corners for hover effect */
+}
+
+.nav-item a.active {
+  color: #ffd700; /* Highlight color for active link */
+  font-weight: bold; /* Emphasize active link */
+}
