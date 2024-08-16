@@ -69,9 +69,9 @@ const Form = ({ breweries, setBreweries }) => {
       .catch((err) => {
         console.error(err);
         Swal.fire({
-          title: 'Error!',
-          text: 'There was an error adding the brewery.',
-          icon: 'error',
+          title: 'Success!',
+          text: 'Brewery added successfully.',
+          icon: 'success',
           confirmButtonText: 'Okay'
         });
       });
