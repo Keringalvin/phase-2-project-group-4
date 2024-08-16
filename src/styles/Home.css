@@ -42,12 +42,13 @@
 }
 
 .fetcher {
-  border: 2px solid rgb(241, 26, 26);
+  /* border: 2px solid rgb(241, 26, 26); */
   width: 400px;
   height: 500px; /* Set a fixed height or use max-height if preferred */
   overflow-y: auto; /* Enables vertical scrolling */
   position: relative; /* Ensures the 'top' property affects the element, if needed */
   top: -1000px; /* Adjust this if needed */
+  left: 800px;
 }
 
 
@@ -58,7 +59,7 @@
   justify-content: center;
   position: relative;
   top: -1000px;
-  right: 870px;
+  /* right: 870px; */
 }
 
 .search-bar input {
