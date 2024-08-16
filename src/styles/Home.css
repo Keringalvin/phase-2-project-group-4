@@ -1,0 +1,150 @@
+/* Main container for Home component */
+.home-container {
+  background-color: #000000;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+  justify-content: center; /* Centers content vertically */
+  overflow: hidden; /* Prevents scrollbars during animations */
+}
+/* Animations for sliding elements */
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.home-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out; /* Optional: Add animation */
+}
+/* Header words */
+.words {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  animation: slideInFromTop 1s ease-out;
+}
+
+.words p {
+  color: white;
+  padding: 10px 20px;
+  font-size: 3rem;
+  text-align: center;
+  margin: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Introduction section */
+.introduction p {
+  font-size: 2.5rem;
+  text-align: center;
+  color: white;
+  animation: slideInFromTop 1s ease-out 0.5s forwards;
+}
+
+/* Brew display cards */
+.brew-display {
+  margin-bottom: 25px;
+  background-color: #333;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Fetcher container */
+.fetcher {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  max-height: 500px;
+  overflow-y: auto;
+  margin: 20px auto;
+  animation: slideInFromTop 1s ease-out;
+}
+
+/* Search input styling */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  animation: slideInFromTop 1s ease-out;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.search-bar input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Form link styling */
+.to-form {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.to-form a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.to-form a:hover {
+  color: lightblue;
+}
+
+.to-form a:active {
+  color: red;
+}
+
+/* Ending section */
+.ending {
+  font-size: 2.5rem;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  .brew-display {
+    margin-bottom: 15px;
+    width: 90%;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+}
