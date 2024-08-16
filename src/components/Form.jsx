@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import '../styles/Form.css'
+import { useNavigate } from "react-router-dom";
 
 const Form = ({ breweries, setBreweries }) => {
+
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     name: "",
     brewery_type: "",
@@ -75,6 +78,7 @@ const Form = ({ breweries, setBreweries }) => {
           confirmButtonText: 'Okay'
         });
       });
+      navigate("/home")
   }
 
   return (
@@ -198,7 +202,7 @@ const Form = ({ breweries, setBreweries }) => {
           <input
             type="tel"
             name="phone"
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            // pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
             value={formData.phone}
             required
             onChange={handlesAdds}
