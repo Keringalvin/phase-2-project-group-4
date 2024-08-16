@@ -1,0 +1,58 @@
+/* General Navbar Styles */
+.nav {
+  background-color: #333; /* Dark background for a modern look */
+  color: #fff; /* White text for contrast */
+  padding: 10px 20px; /* Spacing around the content */
+}
+
+.header {
+  font-size: 24px; /* Larger text for the header */
+  font-weight: bold; /* Bold text for emphasis */
+  text-align: center; /* Center align header text */
+  margin-bottom: 10px; /* Space below the header */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Space between brand and nav items */
+  align-items: center; /* Center items vertically */
+}
+
+.navbar-brand {
+  font-size: 20px; /* Brand name size */
+}
+
+.navbar-brand a {
+  color: #fff; /* White text color for brand */
+  text-decoration: none; /* Remove underline from links */
+  font-weight: bold; /* Bold font for emphasis */
+}
+
+.navbar-nav {
+  list-style: none; /* Remove default list styling */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Flexbox layout for nav items */
+}
+
+.nav-item {
+  margin: 0 15px; /* Space between nav items */
+}
+
+.nav-item a {
+  color: #fff; /* White text color for links */
+  text-decoration: none; /* Remove underline from links */
+  padding: 5px 10px; /* Padding around links */
+  transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+.nav-item a:hover {
+  color: #ffd700; /* Highlight color on hover */
+  background-color: #444; /* Slightly lighter background on hover */
+  border-radius: 5px; /* Rounded corners for hover effect */
+}
+
+.nav-item a.active {
+  color: #ffd700; /* Highlight color for active link */
+  font-weight: bold; /* Emphasize active link */
+}
