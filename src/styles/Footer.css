@@ -5,10 +5,13 @@
     height: 80vw;
     width: 100vw;
     padding: 20px 10px;
+    position: relative;
+    top: -400px;
   
   }
+
   
-  .quote{
+  .quote, h3{
     text-align: center;
   }
   

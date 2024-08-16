@@ -28,8 +28,6 @@ const BrewDisplay = ({ brew }) => {
           <p>longitude: {brew.longitude}</p>
           <p>latitude: {brew.latitude}</p>
           <p>Street: {brew.street}</p>
-
-          {/* Add more details here as needed */}
         </div>
         </div>
       )}

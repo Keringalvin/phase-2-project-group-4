@@ -1,103 +1,150 @@
 /* Main container for Home component */
 .home-container {
-  /* padding: 20px; */
   background-color: #000000;
-  /* min-height: 50vh; */
-}
-.first {
-  margin-left: 50%;
-  border: 30px solid pink;
-}
-
-.words {
-  position: relative; /* Allows the 'top' property to take effect */
-  top: -1160px; /* Adjust this value to move the element up */
-  /* bottom: 0; */
-  border: 2px solid pink;
-  margin-left: 45%;
+  padding: 20px;
+  min-height: 100vh;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+  justify-content: center; /* Centers content vertically */
+  overflow: hidden; /* Prevents scrollbars during animations */
+}
+/* Animations for sliding elements */
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-.words p{
-  border: 4px solid white;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.home-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out; /* Optional: Add animation */
+}
+/* Header words */
+.words {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  animation: slideInFromTop 1s ease-out;
+}
+
+.words p {
   color: white;
-  padding-right: 70px;
-  font-size: 10ch;
-  position: relative; /* Allows the 'top' property to take effect */
-  top: -85px; /* Adjust this value to move the element up */
+  padding: 10px 20px;
+  font-size: 3rem;
   text-align: center;
+  margin: 10px;
+  animation: fadeIn 1s ease-in-out;
 }
 
-.introduction p{
-  position: relative;
-  top: -1100px;
-  border: 5px solid pink;
+/* Introduction section */
+.introduction p {
+  font-size: 2.5rem;
   text-align: center;
+  color: white;
+  animation: slideInFromTop 1s ease-out 0.5s forwards;
 }
 
-/* Add spacing between BrewDisplay components */
+/* Brew display cards */
 .brew-display {
   margin-bottom: 25px;
+  background-color: #333;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
 }
 
+/* Fetcher container */
 .fetcher {
-  /* border: 2px solid rgb(241, 26, 26); */
-  width: 400px;
-  height: 500px; /* Set a fixed height or use max-height if preferred */
-  overflow-y: auto; /* Enables vertical scrolling */
-  position: relative; /* Ensures the 'top' property affects the element, if needed */
-  top: -1000px; /* Adjust this if needed */
-  left: 800px;
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  max-height: 500px;
+  overflow-y: auto;
+  margin: 20px auto;
+  animation: slideInFromTop 1s ease-out;
 }
-
 
 /* Search input styling */
 .search-bar {
-  margin: 10px 0;
   display: flex;
   justify-content: center;
-  position: relative;
-  top: -1000px;
-  /* right: 870px; */
+  margin: 20px 0;
+  animation: slideInFromTop 1s ease-out;
 }
 
 .search-bar input {
-  padding: 8px;
-  width: 200px;
+  padding: 10px;
+  width: 250px;
   border: 1px solid #ccc;
   border-radius: 4px;
-}
-.to-form{
-  text-align: center;
-  position: relative; /* Ensures the 'top' property affects the element, if needed */
-  top: -950px; /* Adjust this if needed */
+  font-size: 1rem;
+  transition: border-color 0.3s;
 }
 
+.search-bar input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Form link styling */
+.to-form {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
 
 .to-form a {
-  color: white; /* Default link color */
-  text-decoration: none; /* Remove underline */
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .to-form a:hover {
-  color: lightblue; /* Color when hovered */
+  color: lightblue;
 }
 
 .to-form a:active {
-  color: red; /* Color when clicked */
+  color: red;
 }
 
-.ending{
-  position: relative;
-  top: -900px;
-  border: 5px solid pink;
+/* Ending section */
+.ending {
+  font-size: 2.5rem;
   text-align: center;
+  color: white;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
 }
 
 /* Media query for responsive design */
 @media (max-width: 768px) {
   .brew-display {
     margin-bottom: 15px;
+    width: 90%;
+  }
+
+  .search-bar input {
+    width: 100%;
   }
 }

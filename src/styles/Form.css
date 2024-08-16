@@ -1,65 +1,100 @@
 /* Form.css */
 
-/* Container for the entire form */
+/* Main container styling */
 .form-container {
-  background-color: #ffffff; /* White background for the form container */
-  padding: 30px;
-  border-radius: 8px; /* Rounded corners for the form container */
-  max-width: 800px; /* Maximum width of the form */
-  margin: 50px auto; /* Center the form horizontally and add space from the top */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for a lifted effect */
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 900px;
+  margin: 30px auto;
+  animation: fadeIn 1s ease-in;
 }
 
-/* Heading styling */
-.form-container h1 {
-  font-size: 2rem; /* Size of the heading */
-  color: #333; /* Dark color for good readability */
-  text-align: center; /* Center the heading */
-  margin-bottom: 20px; /* Space below the heading */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Form styling */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
 form {
-  display: grid;
-  gap: 15px; /* Space between form elements */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-/* Form group styling */
 .form-group {
   display: flex;
   flex-direction: column;
 }
 
-/* Label styling */
-.form-group label {
-  font-size: 1rem; /* Size of the label text */
-  color: #555; /* Slightly lighter color for the labels */
-  margin-bottom: 5px; /* Space below the label */
-}
-
-/* Input and select styling */
-.form-group input,
-.form-group select {
-  padding: 10px;
-  border: 1px solid #ccc; /* Border color */
-  border-radius: 4px; /* Rounded corners */
-  font-size: 1rem; /* Font size of the input text */
-  width: 100%; /* Full width of the input fields */
-  background-color: #f9f9f9; /* Light gray background for form fields */
-}
-
-/* Input for submit button */
-input[type="submit"] {
-  background-color: #007bff; /* Primary color for the button */
-  color: #fff; /* White text color */
-  border: none; /* Remove border */
-  padding: 15px;
+label {
   font-size: 1rem;
-  border-radius: 4px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  color: #555;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 input[type="submit"]:hover {
-  background-color: #0056b3; /* Darker color on hover */
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+input[type="submit"]:active {
+  background-color: #004080;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 15px;
+    margin: 20px auto;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  input,
+  select {
+    font-size: 0.9rem;
+  }
 }

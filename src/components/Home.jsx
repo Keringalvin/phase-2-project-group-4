@@ -38,11 +38,11 @@ const display = filteringBrands.map(
       <img  src='https://images.unsplash.com/photo-1584225065152-4a1454aa3d4e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='A brew photo'/>
       {/* <caption style={{color: `white`}}>Hi there</caption> */}
       <div className='words'>
-        <p style={{color: `white`}}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci nobis minus cumque illo voluptates aliquam provident a. Libero impedit eius labore praesentium nulla, eveniet est tempore eligendi delectus maxime incidunt!</p>
+      <p style={{color: 'white'}}>Brewed with care and passion, our beers offer a unique taste experience. Savor each flavor as it unfolds, and let every sip bring you closer to the heart of true craftsmanship. Cheers to quality and tradition!</p>
       </div>
       <div className='introduction'>
         <p style={{color:`white`}}>
-          Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo veniam, rem, maxime temporibus autem ex dolorem dolorum provident totam sapiente est mollitia nisi! Hic aperiam aut odit ipsa in perferendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab iusto a inventore deserunt aperiam temporibus laudantium esse possimus, voluptates odio fuga, obcaecati, veniam voluptatem nesciunt quae molestias repellendus odit totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit dicta cumque suscipit assumenda perspiciatis nam provident impedit deserunt necessitatibus blanditiis? Totam facilis perferendis at veritatis quis nesciunt numquam veniam. Recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nesciunt non ab fuga, quod deleniti perferendis dolore natus distinctio, commodi magni hic maxime porro recusandae libero debitis, doloremque animi molestias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, esse facilis. Iste amet recusandae, non earum veritatis quod iure, minus voluptatibus neque molestiae incidunt sit corrupti, dignissimos quidem voluptatum alias.
+        Explore a curated selection of top-notch brewery brands, each known for their unique flavors and exceptional quality. From time-honored classics to innovative new brews, our collection showcases the best of the craft beer world. Discover the stories behind each brand and find your new favorite brew.
         </p>
       </div>
       <div>
@@ -63,7 +63,7 @@ const display = filteringBrands.map(
       </div>
       <div className='ending'>
         <p style={{color:`white`}}>
-          Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo veniam, rem, maxime temporibus autem ex dolorem dolorum provident totam sapiente est mollitia nisi! Hic aperiam aut odit ipsa in perferendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab iusto a inventore deserunt aperiam temporibus laudantium esse possimus, voluptates odio fuga, obcaecati, veniam voluptatem nesciunt quae molestias repellendus odit totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit dicta cumque suscipit assumenda perspiciatis nam provident impedit deserunt necessitatibus blanditiis? Totam facilis perferendis at veritatis quis nesciunt numquam veniam. Recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nesciunt non ab fuga, quod deleniti perferendis dolore natus distinctio, commodi magni hic maxime porro recusandae libero debitis, doloremque animi molestias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, esse facilis. Iste amet recusandae, non earum veritatis quod iure, minus voluptatibus neque molestiae incidunt sit corrupti, dignissimos quidem voluptatum alias.
+        Thank you for exploring our collection of distinguished brewery brands. We hope you’ve enjoyed discovering the rich variety and craftsmanship each brand has to offer. Cheers to finding your perfect brew and to many more exceptional moments ahead. Stay tuned for more updates and new additions!
         </p>
 
       </div>

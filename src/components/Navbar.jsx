@@ -17,9 +17,6 @@ function Navbar() {
           <li className="nav-item">
             <Link to="/form">Form</Link>
           </li>
-          <li className="nav-item">
-            <Link to="/contact">Contact</Link>
-          </li>
         </ul>
       </nav>
     </div>
